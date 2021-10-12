@@ -22,7 +22,7 @@ requirements:
     - wheel
   run:
     - python
-    - pymeeus <=1,>=0.3.6
+    - pymeeus <=1,>=0.3.13
     - pytz >=2014.10
 
 test:

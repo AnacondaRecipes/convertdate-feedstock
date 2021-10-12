@@ -9,18 +9,21 @@ source:
   sha256: 57df962a6047534f1452c390ad48e3dc5c83052ad83ad6dd78d60ae22f99214c
 
 build:
+  skip: True    # [py<36]
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
-  run:
-    - python >=3.5
+    - setuptools
+    - wheel
     - pymeeus <=1,>=0.3.6
     - pytz >=2014.10
+  run:
+    - python
 
 
 test:

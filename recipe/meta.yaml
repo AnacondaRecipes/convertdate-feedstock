@@ -1,7 +1,6 @@
 {% set name = "convertdate" %}
 {% set version = "2.5.1" %}
 
-# Test setup missing in GH and PyPi
 package:
   name: {{ name }}
   version: {{ version }}
@@ -25,6 +24,7 @@ requirements:
     - python
     - pymeeus >=0.3.13,<=1
 
+# Test setup missing in GH and PyPi
 test:
   imports:
     - convertdate
